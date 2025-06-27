@@ -31,7 +31,10 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
-.env*
+# .env* — игнорировать все env-файлы...
+.env.*
+# ...кроме основного .env (он нужен для Cloudflare Pages)
+!.env
 
 # vercel
 .vercel
