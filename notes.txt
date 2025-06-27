@@ -1,0 +1,4 @@
+cd downloads\interior-landing
+npm run dev
+
+поправь код файла, я только скопирую и заменю оригинал:
