@@ -42,26 +42,55 @@ const Contact = () => {
           className="max-w-4xl mx-auto"
         >
           <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-widest mb-4 text-[#0a0a0a] uppercase font-sans">
+            <h2
+              className="font-sans font-bold uppercase text-[1.75rem] md:text-[2rem] mb-4 tracking-[0.02em] leading-tight text-[#0a0a0a]"
+              style={{ letterSpacing: '0.02em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+            >
               Свяжитесь с нами
             </h2>
-            <p className="text-base md:text-lg font-light tracking-wide text-[#0a0a0a] font-sans">
+            <p
+              className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#0a0a0a] font-sans"
+              style={{
+                wordSpacing: '0.3em',
+                letterSpacing: '0.02em',
+                fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+              }}
+            >
               Оставьте заявку, и мы свяжемся с вами для обсуждения вашего проекта
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold tracking-widest mb-6 text-[#0a0a0a] uppercase font-sans">
+              <h3
+                className="font-sans font-bold uppercase text-[1.25rem] md:text-[1.5rem] mb-6 tracking-[0.02em] text-[#0a0a0a]"
+                style={{ letterSpacing: '0.02em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+              >
                 Контактная информация
               </h3>
               <div className="space-y-4">
                 <div>
                   <h4 className="font-medium mb-2 text-[#0a0a0a] tracking-wide font-sans">Адрес</h4>
-                  <p className="text-base font-light tracking-wide text-[#0a0a0a] font-sans">г. Санкт-Петербург</p>
+                  <p
+                    className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#0a0a0a]"
+                    style={{
+                      wordSpacing: '0.3em',
+                      letterSpacing: '0.02em',
+                      fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                    }}
+                  >
+                    г. Санкт-Петербург
+                  </p>
                 </div>
                 <div>
                   <h4 className="font-medium mb-2 text-[#0a0a0a] tracking-wide font-sans">Телефон</h4>
-                  <div className="flex items-center space-x-2 text-base font-light tracking-wide text-[#0a0a0a] font-sans">
+                  <div
+                    className="flex items-center space-x-2 font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#0a0a0a]"
+                    style={{
+                      wordSpacing: '0.3em',
+                      letterSpacing: '0.02em',
+                      fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                    }}
+                  >
                     <span>+7 (965) 777-33-90</span>
                     <FaWhatsapp size={20} className="text-[#0a0a0a]" />
                     <FaTelegramPlane size={20} className="text-[#0a0a0a]" />
@@ -69,7 +98,16 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium mb-2 text-[#0a0a0a] tracking-wide font-sans">Email</h4>
-                  <p className="text-base font-light tracking-wide text-[#0a0a0a] font-sans">info@novanezis.ru</p>
+                  <p
+                    className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#0a0a0a]"
+                    style={{
+                      wordSpacing: '0.3em',
+                      letterSpacing: '0.02em',
+                      fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                    }}
+                  >
+                    info@novanezis.ru
+                  </p>
                 </div>
               </div>
             </div>

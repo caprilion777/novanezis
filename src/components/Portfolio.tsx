@@ -53,10 +53,20 @@ const Portfolio = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-widest mb-4 text-[#0a0a0a] uppercase font-sans">
+          <h2
+            className="font-sans font-bold uppercase text-[1.75rem] md:text-[2rem] mb-4 tracking-[0.02em] leading-tight text-[#0a0a0a]"
+            style={{ letterSpacing: '0.02em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+          >
             Наши проекты
           </h2>
-          <p className="text-base md:text-lg font-light tracking-wide text-[#0a0a0a] max-w-2xl mx-auto font-sans">
+          <p
+            className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#0a0a0a] max-w-2xl mx-auto"
+            style={{
+              wordSpacing: '0.3em',
+              letterSpacing: '0.02em',
+              fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+            }}
+          >
             Каждый проект — это уникальная история, созданная с любовью к деталям
           </p>
         </motion.div>
@@ -70,6 +80,10 @@ const Portfolio = () => {
                   ? 'bg-[#0a0a0a] text-[#fafafa]'
                   : 'bg-white text-[#0a0a0a] hover:bg-gray-100 border border-[#0a0a0a]'
               }`}
+              style={{
+                letterSpacing: '0.02em',
+                fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+              }}
             >
               {category}
             </button>
@@ -95,8 +109,22 @@ const Portfolio = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 p-6 text-white">
-                    <h3 className="text-xl font-semibold tracking-widest mb-2 uppercase font-sans">{project.title}</h3>
-                    <p className="text-base font-light tracking-wide text-gray-200 font-sans">{project.area}</p>
+                    <h3
+                      className="font-sans font-bold uppercase text-xl mb-2 tracking-[0.02em]"
+                      style={{ letterSpacing: '0.02em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+                    >
+                      {project.title}
+                    </h3>
+                    <p
+                      className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-gray-200"
+                      style={{
+                        wordSpacing: '0.3em',
+                        letterSpacing: '0.02em',
+                        fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                      }}
+                    >
+                      {project.area}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -126,8 +154,22 @@ const Portfolio = () => {
                 className="w-full h-[600px] object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-semibold tracking-widest mb-2 text-[#0a0a0a] uppercase font-sans">{selectedProject.title}</h3>
-                <p className="text-base font-light tracking-wide text-[#0a0a0a] font-sans">Площадь: {selectedProject.area}</p>
+                <h3
+                  className="font-sans font-bold uppercase text-2xl mb-2 tracking-[0.02em] text-[#0a0a0a]"
+                  style={{ letterSpacing: '0.02em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+                >
+                  {selectedProject.title}
+                </h3>
+                <p
+                  className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#0a0a0a]"
+                  style={{
+                    wordSpacing: '0.3em',
+                    letterSpacing: '0.02em',
+                    fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                  }}
+                >
+                  Площадь: {selectedProject.area}
+                </p>
               </div>
               <button
                 className="absolute top-4 right-4 w-10 h-10 bg-[#0a0a0a] rounded-full flex items-center justify-center text-[#fafafa] hover:bg-gray-800"

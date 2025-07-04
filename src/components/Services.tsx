@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { HomeIcon, PaintBrushIcon, CubeIcon, SparklesIcon, ShoppingBagIcon, PlayCircleIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline';
+import { HomeIcon, PlayCircleIcon, ClipboardDocumentCheckIcon, ShoppingBagIcon, SparklesIcon } from '@heroicons/react/24/outline';
 
 const services = [
   {
@@ -41,10 +41,20 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-widest mb-4 text-[#0a0a0a] uppercase font-sans">
+          <h2
+            className="font-sans font-bold uppercase text-[1.75rem] md:text-[2rem] mb-4 tracking-[0.02em] leading-tight text-[#0a0a0a]"
+            style={{ letterSpacing: '0.02em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+          >
             Наши услуги
           </h2>
-          <p className="text-base md:text-lg font-light tracking-wide text-[#0a0a0a] max-w-4xl mx-auto text-left font-sans">
+          <p
+            className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#0a0a0a] max-w-4xl mx-auto text-left"
+            style={{
+              wordSpacing: '0.3em',
+              letterSpacing: '0.02em',
+              fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+            }}
+          >
             Создаём стильные и функциональные интерьеры, отражающие ваш характер и образ жизни. Полный цикл услуг — от идеи до реализации: планировка, визуализация, подбор материалов, авторский надзор. Работаем как очно, так и онлайн - с точным соблюдением сроков.
           </p>
         </motion.div>
@@ -59,8 +69,22 @@ const Services = () => {
               className="p-6 rounded-xl bg-white hover:shadow-lg transition border border-gray-200 font-sans"
             >
               <service.icon className="w-12 h-12 text-[#0a0a0a] mb-4" />
-              <h3 className="text-xl font-semibold tracking-widest mb-2 text-[#0a0a0a] uppercase font-sans">{service.title}</h3>
-              <p className="text-base font-light tracking-wide text-[#0a0a0a] font-sans">{service.description}</p>
+              <h3
+                className="font-sans font-bold uppercase text-xl mb-2 tracking-[0.02em] text-[#0a0a0a]"
+                style={{ letterSpacing: '0.02em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+              >
+                {service.title}
+              </h3>
+              <p
+                className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#0a0a0a]"
+                style={{
+                  wordSpacing: '0.3em',
+                  letterSpacing: '0.02em',
+                  fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                }}
+              >
+                {service.description}
+              </p>
             </motion.div>
           ))}
         </div>
