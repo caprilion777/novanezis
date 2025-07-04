@@ -1,7 +1,6 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 import { FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
 
 const Contact = () => {
@@ -34,7 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-30 bg-[#fafafa]">
+    <section id="contact" className="py-30 bg-[#fafafa] font-sans">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,80 +42,84 @@ const Contact = () => {
           className="max-w-4xl mx-auto"
         >
           <div className="text-center mb-16">
-            <h2 className="text-[32px] font-bold mb-4 text-[#0a0a0a]">Свяжитесь с нами</h2>
-            <p className="text-[#0a0a0a] text-[16px]">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-widest mb-4 text-[#0a0a0a] uppercase font-sans">
+              Свяжитесь с нами
+            </h2>
+            <p className="text-base md:text-lg font-light tracking-wide text-[#0a0a0a] font-sans">
               Оставьте заявку, и мы свяжемся с вами для обсуждения вашего проекта
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-[#0a0a0a]">Контактная информация</h3>
+              <h3 className="text-xl md:text-2xl font-semibold tracking-widest mb-6 text-[#0a0a0a] uppercase font-sans">
+                Контактная информация
+              </h3>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-medium mb-2 text-[#0a0a0a]">Адрес</h4>
-                  <p className="text-[#0a0a0a] text-[16px]">г. Санкт-Петербург</p>
+                  <h4 className="font-medium mb-2 text-[#0a0a0a] tracking-wide font-sans">Адрес</h4>
+                  <p className="text-base font-light tracking-wide text-[#0a0a0a] font-sans">г. Санкт-Петербург</p>
                 </div>
                 <div>
-                  <h4 className="font-medium mb-2 text-[#0a0a0a]">Телефон</h4>
-                  <div className="flex items-center space-x-2 text-[#0a0a0a] text-[16px]">
+                  <h4 className="font-medium mb-2 text-[#0a0a0a] tracking-wide font-sans">Телефон</h4>
+                  <div className="flex items-center space-x-2 text-base font-light tracking-wide text-[#0a0a0a] font-sans">
                     <span>+7 (965) 777-33-90</span>
                     <FaWhatsapp size={20} className="text-[#0a0a0a]" />
                     <FaTelegramPlane size={20} className="text-[#0a0a0a]" />
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-medium mb-2 text-[#0a0a0a]">Email</h4>
-                  <p className="text-[#0a0a0a] text-[16px]">info@novanezis.ru</p>
+                  <h4 className="font-medium mb-2 text-[#0a0a0a] tracking-wide font-sans">Email</h4>
+                  <p className="text-base font-light tracking-wide text-[#0a0a0a] font-sans">info@novanezis.ru</p>
                 </div>
               </div>
             </div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-[#0a0a0a] mb-2">
+                <label className="block text-sm font-medium text-[#0a0a0a] mb-2 font-sans">
                   Ваше имя
                 </label>
                 <input
                   type="text"
                   name="name"
-                  className="w-full px-4 py-2 bg-transparent text-[#0a0a0a] border border-[#0a0a0a] rounded-lg focus:ring-2 focus:ring-[#0a0a0a] focus:border-transparent"
+                  className="w-full px-4 py-2 bg-transparent text-[#0a0a0a] border border-[#0a0a0a] rounded-lg focus:ring-2 focus:ring-[#0a0a0a] focus:border-transparent font-sans"
                   value={formData.name}
                   onChange={e => setFormData({ ...formData, name: e.target.value })}
                   required
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-[#0a0a0a] mb-2">
+                <label className="block text-sm font-medium text-[#0a0a0a] mb-2 font-sans">
                   Email
                 </label>
                 <input
                   type="email"
                   name="email"
-                  className="w-full px-4 py-2 bg-transparent text-[#0a0a0a] border border-[#0a0a0a] rounded-lg focus:ring-2 focus:ring-[#0a0a0a] focus:border-transparent"
+                  className="w-full px-4 py-2 bg-transparent text-[#0a0a0a] border border-[#0a0a0a] rounded-lg focus:ring-2 focus:ring-[#0a0a0a] focus:border-transparent font-sans"
                   value={formData.email}
                   onChange={e => setFormData({ ...formData, email: e.target.value })}
                   required
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-[#0a0a0a] mb-2">
+                <label className="block text-sm font-medium text-[#0a0a0a] mb-2 font-sans">
                   Телефон
                 </label>
                 <input
                   type="tel"
                   name="phone"
-                  className="w-full px-4 py-2 bg-transparent text-[#0a0a0a] border border-[#0a0a0a] rounded-lg focus:ring-2 focus:ring-[#0a0a0a] focus:border-transparent"
+                  className="w-full px-4 py-2 bg-transparent text-[#0a0a0a] border border-[#0a0a0a] rounded-lg focus:ring-2 focus:ring-[#0a0a0a] focus:border-transparent font-sans"
                   value={formData.phone}
                   onChange={e => setFormData({ ...formData, phone: e.target.value })}
                   required
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-[#0a0a0a] mb-2">
+                <label className="block text-sm font-medium text-[#0a0a0a] mb-2 font-sans">
                   Сообщение
                 </label>
                 <textarea
                   name="message"
-                  className="w-full px-4 py-2 bg-transparent text-[#0a0a0a] border border-[#0a0a0a] rounded-lg focus:ring-2 focus:ring-[#0a0a0a] focus:border-transparent h-32"
+                  className="w-full px-4 py-2 bg-transparent text-[#0a0a0a] border border-[#0a0a0a] rounded-lg focus:ring-2 focus:ring-[#0a0a0a] focus:border-transparent h-32 font-sans"
                   value={formData.message}
                   onChange={e => setFormData({ ...formData, message: e.target.value })}
                   required
@@ -124,15 +127,15 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-[#0a0a0a] text-[#fafafa] py-3 rounded-lg font-medium hover:bg-gray-800 transition"
+                className="w-full bg-[#0a0a0a] text-[#fafafa] py-3 rounded-lg font-medium hover:bg-gray-800 transition font-sans"
               >
                 Отправить заявку
               </button>
               {status === 'success' && (
-                <p className="text-green-600 text-center">Спасибо! Ваша заявка отправлена.</p>
+                <p className="text-green-600 text-center font-sans">Спасибо! Ваша заявка отправлена.</p>
               )}
               {status === 'error' && (
-                <p className="text-red-600 text-center">Ошибка отправки. Попробуйте позже.</p>
+                <p className="text-red-600 text-center font-sans">Ошибка отправки. Попробуйте позже.</p>
               )}
             </form>
           </div>

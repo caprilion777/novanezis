@@ -4,19 +4,23 @@ import { FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0a0a0a] text-[#fafafa] text-sm">
+    <footer className="bg-[#0a0a0a] text-[#fafafa] text-sm font-sans">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-8 justify-items-center">
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold mb-4">NOVANEZIS</h3>
-            <p className="text-[#fafafa]">
+            <h3 className="text-2xl font-semibold tracking-widest mb-4 text-[#fafafa] uppercase font-sans">
+              NOVANEZIS
+            </h3>
+            <p className="text-base font-light tracking-wide text-[#fafafa] font-sans">
               Создаем пространства, которые работают на вас
             </p>
           </div>
           <div></div>
           <div className="text-center md:text-left">
-            <h4 className="font-semibold mb-4">Контакты</h4>
-            <ul className="space-y-2 text-[#fafafa]">
+            <h4 className="text-base font-semibold mb-4 tracking-widest uppercase font-sans text-[#fafafa]">
+              Контакты
+            </h4>
+            <ul className="space-y-2 text-base font-light tracking-wide text-[#fafafa] font-sans">
               <li>г. Санкт-Петербург</li>
               <li>
                 <div className="flex items-center justify-center md:justify-start space-x-2">
@@ -29,7 +33,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="border-t border-[#fafafa] mt-12 pt-8 text-center text-[#fafafa]">
+        <div className="border-t border-[#fafafa] mt-12 pt-8 text-center text-[#fafafa] font-sans text-sm tracking-wide">
           <p>&copy; {new Date().getFullYear()} NOVANEZIS. Все права защищены.</p>
         </div>
       </div>
