@@ -17,7 +17,7 @@ const AboutUs = () => {
           <div className="w-full md:w-1/2 max-w-xl text-left mx-auto md:mx-0 text-[#0a0a0a]">
             <h2
               className="font-sans font-bold uppercase text-[1.125rem] tracking-[0.04em] mb-6"
-              style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+              style={{ letterSpacing: '0.04em' }}
             >
               О НАС
             </h2>
@@ -25,8 +25,7 @@ const AboutUs = () => {
               className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide mb-4"
               style={{
                 wordSpacing: '0.3em',
-                letterSpacing: '0.02em',
-                fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                letterSpacing: '0.02em'
               }}
             >
               NOVANEZIS — студия дизайна интерьеров, объединяющая профессионалов с опытом реализации проектов квартир и частных домов.
@@ -35,8 +34,7 @@ const AboutUs = () => {
               className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide mb-4"
               style={{
                 wordSpacing: '0.3em',
-                letterSpacing: '0.02em',
-                fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                letterSpacing: '0.02em'
               }}
             >
               Мы создаём эстетичные и функциональные пространства, в которых продуман каждый элемент — от планировки до декора.
@@ -45,8 +43,7 @@ const AboutUs = () => {
               className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide mb-4"
               style={{
                 wordSpacing: '0.3em',
-                letterSpacing: '0.02em',
-                fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                letterSpacing: '0.02em'
               }}
             >
               Наша миссия — превращать идеи клиентов в живые, гармоничные интерьеры.
@@ -55,8 +52,7 @@ const AboutUs = () => {
               className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide mb-4"
               style={{
                 wordSpacing: '0.3em',
-                letterSpacing: '0.02em',
-                fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                letterSpacing: '0.02em'
               }}
             >
               Наша цель — сделать процесс проектирования и реализации максимально комфортным, прозрачным и эффективным.
@@ -65,8 +61,7 @@ const AboutUs = () => {
               className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide"
               style={{
                 wordSpacing: '0.3em',
-                letterSpacing: '0.02em',
-                fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                letterSpacing: '0.02em'
               }}
             >
               Работаем онлайн и на выезде — гибко подстраиваемся под задачи и ритм клиента.

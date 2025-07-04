@@ -33,7 +33,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="design" className="py-30 bg-[#fafafa] font-sans scroll-mt-[50px]">
+    <section id="design" className="py-30 bg-[#fafafa] font-sans scroll-mt-[25px] md:scroll-mt-[25px]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,7 +43,7 @@ const Services = () => {
         >
           <h2
             className="font-sans font-bold uppercase text-[1.125rem] tracking-[0.04em] mb-4 text-[#0a0a0a]"
-            style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+            style={{ letterSpacing: '0.04em' }}
           >
             Наши услуги
           </h2>
@@ -51,8 +51,7 @@ const Services = () => {
             className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#0a0a0a] max-w-4xl mx-auto text-left"
             style={{
               wordSpacing: '0.3em',
-              letterSpacing: '0.02em',
-              fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+              letterSpacing: '0.02em'
             }}
           >
             Создаём стильные и функциональные интерьеры, отражающие ваш характер и образ жизни. Полный цикл услуг — от идеи до реализации: планировка, визуализация, подбор материалов, авторский надзор. Работаем как очно, так и онлайн - с точным соблюдением сроков.
@@ -71,7 +70,7 @@ const Services = () => {
               <service.icon className="w-12 h-12 text-[#0a0a0a] mb-4" />
               <h3
                 className="font-sans font-bold uppercase text-[1.125rem] tracking-[0.04em] mb-2 text-[#0a0a0a]"
-                style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+                style={{ letterSpacing: '0.04em' }}
               >
                 {service.title}
               </h3>
@@ -79,8 +78,7 @@ const Services = () => {
                 className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#0a0a0a]"
                 style={{
                   wordSpacing: '0.3em',
-                  letterSpacing: '0.02em',
-                  fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                  letterSpacing: '0.02em'
                 }}
               >
                 {service.description}

@@ -41,7 +41,7 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="py-30 bg-[#fafafa] font-sans scroll-mt-[50px]"
+      className="py-30 bg-[#fafafa] font-sans scroll-mt-[25px] md:scroll-mt-[25px]"
       style={{
         paddingTop: `${MENU_HEIGHT}px`,
       }}
@@ -55,7 +55,7 @@ const Portfolio = () => {
         >
           <h2
             className="font-sans font-bold uppercase text-[1.125rem] tracking-[0.04em] mb-4 text-[#0a0a0a]"
-            style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+            style={{ letterSpacing: '0.04em' }}
           >
             Наши проекты
           </h2>
@@ -63,8 +63,7 @@ const Portfolio = () => {
             className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#0a0a0a] max-w-2xl mx-auto"
             style={{
               wordSpacing: '0.3em',
-              letterSpacing: '0.02em',
-              fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+              letterSpacing: '0.02em'
             }}
           >
             Каждый проект — это уникальная история, созданная с любовью к деталям
@@ -81,8 +80,7 @@ const Portfolio = () => {
                   : 'bg-white text-[#0a0a0a] hover:bg-gray-100 border border-[#0a0a0a]'
               }`}
               style={{
-                letterSpacing: '0.02em',
-                fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                letterSpacing: '0.02em'
               }}
             >
               {category}
@@ -111,7 +109,7 @@ const Portfolio = () => {
                   <div className="absolute bottom-0 left-0 p-6 text-white">
                     <h3
                       className="font-sans font-bold uppercase text-xl mb-2 tracking-[0.02em]"
-                      style={{ letterSpacing: '0.02em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+                      style={{ letterSpacing: '0.02em' }}
                     >
                       {project.title}
                     </h3>
@@ -119,8 +117,7 @@ const Portfolio = () => {
                       className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-gray-200"
                       style={{
                         wordSpacing: '0.3em',
-                        letterSpacing: '0.02em',
-                        fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                        letterSpacing: '0.02em'
                       }}
                     >
                       {project.area}
@@ -156,7 +153,7 @@ const Portfolio = () => {
               <div className="p-6">
                 <h3
                   className="font-sans font-bold uppercase text-2xl mb-2 tracking-[0.02em] text-[#0a0a0a]"
-                  style={{ letterSpacing: '0.02em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+                  style={{ letterSpacing: '0.02em' }}
                 >
                   {selectedProject.title}
                 </h3>
@@ -164,8 +161,7 @@ const Portfolio = () => {
                   className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#0a0a0a]"
                   style={{
                     wordSpacing: '0.3em',
-                    letterSpacing: '0.02em',
-                    fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                    letterSpacing: '0.02em'
                   }}
                 >
                   Площадь: {selectedProject.area}
