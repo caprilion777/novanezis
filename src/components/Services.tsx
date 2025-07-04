@@ -42,8 +42,8 @@ const Services = () => {
           className="text-center mb-16"
         >
           <h2
-            className="font-sans font-bold uppercase text-[1.75rem] md:text-[2rem] mb-4 tracking-[0.02em] leading-tight text-[#0a0a0a]"
-            style={{ letterSpacing: '0.02em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+            className="font-sans font-bold uppercase text-[1.125rem] tracking-[0.04em] mb-4 text-[#0a0a0a]"
+            style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
           >
             Наши услуги
           </h2>
@@ -70,8 +70,8 @@ const Services = () => {
             >
               <service.icon className="w-12 h-12 text-[#0a0a0a] mb-4" />
               <h3
-                className="font-sans font-bold uppercase text-xl mb-2 tracking-[0.02em] text-[#0a0a0a]"
-                style={{ letterSpacing: '0.02em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+                className="font-sans font-bold uppercase text-[1.125rem] tracking-[0.04em] mb-2 text-[#0a0a0a]"
+                style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
               >
                 {service.title}
               </h3>

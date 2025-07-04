@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 justify-items-center">
           <div className="text-center md:text-left">
             <h3
-              className="font-sans font-bold uppercase text-[1.5rem] mb-4 tracking-[0.02em] text-[#fafafa]"
-              style={{ letterSpacing: '0.02em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+              className="font-sans font-bold uppercase text-[1.125rem] mb-4 tracking-[0.04em] text-[#fafafa]"
+              style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
             >
               NOVANEZIS
             </h3>
@@ -28,8 +28,8 @@ const Footer = () => {
           <div></div>
           <div className="text-center md:text-left">
             <h4
-              className="font-sans font-bold uppercase text-base mb-4 tracking-[0.02em] text-[#fafafa]"
-              style={{ letterSpacing: '0.02em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+              className="font-sans font-bold uppercase text-[1.125rem] mb-4 tracking-[0.04em] text-[#fafafa]"
+              style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
             >
               Контакты
             </h4>
