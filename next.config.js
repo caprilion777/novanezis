@@ -4,7 +4,10 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  output: 'export', // Важно для Cloudflare Pages и Next.js 15+
+  devIndicators: {
+    devtools: false,
+  },
+  // output: 'export', // Важно для Cloudflare Pages и Next.js 15+ (убери или закомментируй!)
   // другие настройки можно добавлять ниже, если нужно
 };
 

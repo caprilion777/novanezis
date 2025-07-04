@@ -1,35 +1,10 @@
 'use client';
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { HiMenu, HiX } from 'react-icons/hi';
 
 const Hero = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const isVisible = !isScrolled || isHovered;
-
-  const handleScroll = useCallback(() => {
-    const scrollTop = window.scrollY;
-    const newIsScrolled = scrollTop > 50;
-    if (newIsScrolled !== isScrolled) {
-      setIsScrolled(newIsScrolled);
-    }
-  }, [isScrolled]);
-
-  const handleMouseMove = useCallback((e: MouseEvent) => {
-    setIsHovered(e.clientY < 100);
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, [handleScroll, handleMouseMove]);
 
   // Плавный скролл
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -52,22 +27,18 @@ const Hero = () => {
       />
 
       <div
-        className={`main-header fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-12 py-6 md:py-8 z-50 transition-all duration-300 ease-in-out
-          ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}
-          bg-transparent`}
-        onMouseEnter={() => isScrolled && setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        className="main-header fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-12 py-6 md:py-8 z-50 bg-[#fafafa] text-[#0a0a0a] shadow transition-none"
       >
         <a
           href="#top"
-          className={`text-lg tracking-widest font-light transition-colors duration-300 ${isScrolled ? 'text-[#0a0a0a]' : 'text-[#fafafa]'}`}
+          className="text-lg tracking-widest font-light text-[#0a0a0a]"
           onClick={e => handleNavClick(e, 'top')}
         >
           NOVANEZIS — студия дизайна интерьеров
         </a>
         {/* Desktop menu */}
         <nav className="hidden md:block">
-          <ul className={`flex gap-8 text-sm uppercase font-light tracking-widest transition-colors duration-300 ${isScrolled ? 'text-[#0a0a0a]' : 'text-[#fafafa]'}`}>
+          <ul className="flex gap-8 text-sm uppercase font-light tracking-widest text-[#0a0a0a]">
             <li>
               <a
                 href="#portfolio"
@@ -108,7 +79,7 @@ const Hero = () => {
         </nav>
         {/* Mobile burger */}
         <button
-          className={`md:hidden text-3xl transition-colors duration-300 ${isScrolled ? 'text-[#0a0a0a]' : 'text-[#fafafa]'}`}
+          className="md:hidden text-3xl text-[#0a0a0a]"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Открыть меню"
         >
@@ -116,7 +87,7 @@ const Hero = () => {
         </button>
         {/* Mobile menu */}
         {menuOpen && (
-          <nav className="absolute top-full left-0 w-full bg-white flex flex-col items-center gap-6 py-8 shadow md:hidden z-50 animate-fade-in">
+          <nav className="absolute top-full left-0 w-full bg-[#fafafa] flex flex-col items-center gap-6 py-8 shadow md:hidden z-50 animate-fade-in">
             <ul className="flex flex-col gap-6 text-lg uppercase font-light tracking-widest text-[#0a0a0a]">
               <li>
                 <a href="#portfolio" onClick={e => handleNavClick(e, 'portfolio')}>Портфолио</a>

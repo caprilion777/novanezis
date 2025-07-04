@@ -34,3 +34,24 @@ svg[data-next-mark-loading] {
   width: 0 !important;
   height: 0 !important;
 }
+
+/* Hide Next.js DevTools and the "N" logo in dev mode (all known selectors) */
+[data-nextjs-devtools],
+[data-nextjs-devtools-root],
+nextjs-devtools,
+nextjs-portal,
+#nextjs__devtools {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute !important;
+  z-index: -9999 !important;
+}
+
+/* Try to hide DevTools if rendered inside Shadow DOM with part attribute */
+[data-nextjs-devtools]::part(root),
+[data-nextjs-devtools-root]::part(root) {
+  display: none !important;
+}
