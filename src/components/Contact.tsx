@@ -74,7 +74,7 @@ const Contact = () => {
               <div className="space-y-4">
                 <div>
                   <h4
-                    className="font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
+                    className="font-sans font-bold text-[16px] mb-2 text-[#0a0a0a]"
                   >
                     Адрес
                   </h4>
@@ -90,7 +90,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4
-                    className="font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
+                    className="font-sans font-bold text-[16px] mb-2 text-[#0a0a0a]"
                   >
                     Телефон
                   </h4>
@@ -108,7 +108,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4
-                    className="font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
+                    className="font-sans font-bold text-[16px] mb-2 text-[#0a0a0a]"
                   >
                     Email
                   </h4>
