@@ -31,14 +31,14 @@ const Hero = () => {
       >
         <a
           href="#top"
-          className="text-lg tracking-widest font-light text-[#0a0a0a]"
+          className="font-sans font-semibold tracking-widest text-2xl md:text-2xl lg:text-3xl text-[#0a0a0a]"
           onClick={e => handleNavClick(e, 'top')}
         >
-          NOVANEZIS — студия дизайна интерьеров
+          NOVANEZIS
         </a>
         {/* Desktop menu */}
         <nav className="hidden md:block">
-          <ul className="flex gap-8 text-sm uppercase font-light tracking-widest text-[#0a0a0a]">
+          <ul className="flex gap-8 text-base md:text-base lg:text-base font-sans font-light tracking-widest uppercase text-[#0a0a0a]">
             <li>
               <a
                 href="#portfolio"
@@ -88,7 +88,7 @@ const Hero = () => {
         {/* Mobile menu */}
         {menuOpen && (
           <nav className="absolute top-full left-0 w-full bg-[#fafafa] flex flex-col items-center gap-6 py-8 shadow md:hidden z-50 animate-fade-in">
-            <ul className="flex flex-col gap-6 text-lg uppercase font-light tracking-widest text-[#0a0a0a]">
+            <ul className="flex flex-col gap-6 text-base font-sans font-light tracking-widest uppercase text-[#0a0a0a]">
               <li>
                 <a href="#portfolio" onClick={e => handleNavClick(e, 'portfolio')}>Портфолио</a>
               </li>
