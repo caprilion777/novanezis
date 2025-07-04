@@ -16,8 +16,8 @@ const AboutUs = () => {
           {/* Text content on the left (1/3 on desktop, full width on mobile) */}
           <div className="w-full md:w-1/2 max-w-xl text-left mx-auto md:mx-0 text-[#0a0a0a]">
             <h2
-              className="font-sans font-bold uppercase text-[1.75rem] md:text-[2rem] mb-6 tracking-[0.02em] leading-tight"
-              style={{ letterSpacing: '0.02em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+              className="font-sans font-bold uppercase text-[1.125rem] tracking-[0.04em] mb-6"
+              style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
             >
               О НАС
             </h2>
