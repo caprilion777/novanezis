@@ -75,7 +75,7 @@ const Hero = () => {
           <a
             href="#top"
             className="font-sans font-bold uppercase text-[1.25rem] md:text-[1.5rem] tracking-[0.04em] text-[#0a0a0a]"
-            style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+            style={{ letterSpacing: '0.04em' }}
             onClick={e => handleNavClick(e, 'top')}
           >
             NOVANEZIS
@@ -84,7 +84,7 @@ const Hero = () => {
           <nav className="hidden md:block">
             <ul
               className="flex gap-12 font-sans font-normal text-[1.125rem] tracking-[0.04em] uppercase"
-              style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+              style={{ letterSpacing: '0.04em' }}
             >
               {sections.map(section => (
                 <li key={section.id}>
@@ -122,7 +122,7 @@ const Hero = () => {
           >
             <ul
               className="flex flex-col gap-6 font-sans font-normal text-[1.125rem] tracking-[0.04em] uppercase text-[#0a0a0a]"
-              style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+              style={{ letterSpacing: '0.04em' }}
             >
               {sections.map(section => (
                 <li key={section.id}>

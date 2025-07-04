@@ -33,7 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-30 bg-[#fafafa] font-sans scroll-mt-[25px]">
+    <section id="contact" className="py-30 bg-[#fafafa] font-sans scroll-mt-[25px] md:scroll-mt-[25px]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ const Contact = () => {
           <div className="text-center mb-16">
             <h2
               className="font-sans font-bold uppercase text-[1.125rem] tracking-[0.04em] mb-4 text-[#0a0a0a]"
-              style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+              style={{ letterSpacing: '0.04em' }}
             >
               Свяжитесь с нами
             </h2>
@@ -52,8 +52,7 @@ const Contact = () => {
               className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#0a0a0a]"
               style={{
                 wordSpacing: '0.3em',
-                letterSpacing: '0.02em',
-                fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                letterSpacing: '0.02em'
               }}
             >
               Оставьте заявку, и мы свяжемся с вами для обсуждения вашего проекта
@@ -63,7 +62,7 @@ const Contact = () => {
             <div>
               <h3
                 className="font-sans font-bold uppercase text-[1.125rem] tracking-[0.04em] mb-6 text-[#0a0a0a]"
-                style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+                style={{ letterSpacing: '0.04em' }}
               >
                 Контактная информация
               </h3>
@@ -71,7 +70,6 @@ const Contact = () => {
                 <div>
                   <h4
                     className="font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
-                    style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
                   >
                     Адрес
                   </h4>
@@ -79,8 +77,7 @@ const Contact = () => {
                     className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#0a0a0a]"
                     style={{
                       wordSpacing: '0.3em',
-                      letterSpacing: '0.02em',
-                      fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                      letterSpacing: '0.02em'
                     }}
                   >
                     г. Санкт-Петербург
@@ -89,7 +86,6 @@ const Contact = () => {
                 <div>
                   <h4
                     className="font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
-                    style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
                   >
                     Телефон
                   </h4>
@@ -97,8 +93,7 @@ const Contact = () => {
                     className="flex items-center space-x-2 font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#0a0a0a]"
                     style={{
                       wordSpacing: '0.3em',
-                      letterSpacing: '0.02em',
-                      fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                      letterSpacing: '0.02em'
                     }}
                   >
                     <span>+7 (965) 777-33-90</span>
@@ -109,7 +104,6 @@ const Contact = () => {
                 <div>
                   <h4
                     className="font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
-                    style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
                   >
                     Email
                   </h4>
@@ -117,8 +111,7 @@ const Contact = () => {
                     className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#0a0a0a]"
                     style={{
                       wordSpacing: '0.3em',
-                      letterSpacing: '0.02em',
-                      fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                      letterSpacing: '0.02em'
                     }}
                   >
                     info@novanezis.ru
@@ -130,7 +123,6 @@ const Contact = () => {
               <div>
                 <label
                   className="block font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
-                  style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
                 >
                   Ваше имя
                 </label>
@@ -146,7 +138,6 @@ const Contact = () => {
               <div>
                 <label
                   className="block font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
-                  style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
                 >
                   Email
                 </label>
@@ -162,7 +153,6 @@ const Contact = () => {
               <div>
                 <label
                   className="block font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
-                  style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
                 >
                   Телефон
                 </label>
@@ -178,7 +168,6 @@ const Contact = () => {
               <div>
                 <label
                   className="block font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
-                  style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
                 >
                   Сообщение
                 </label>

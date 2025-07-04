@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h3
               className="font-sans font-bold uppercase text-[1.125rem] mb-4 tracking-[0.04em] text-[#fafafa]"
-              style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+              style={{ letterSpacing: '0.04em' }}
             >
               NOVANEZIS
             </h3>
@@ -18,8 +18,7 @@ const Footer = () => {
               className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#fafafa]"
               style={{
                 wordSpacing: '0.3em',
-                letterSpacing: '0.02em',
-                fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                letterSpacing: '0.02em'
               }}
             >
               Создаем пространства, которые работают на вас
@@ -29,7 +28,7 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h4
               className="font-sans font-bold uppercase text-[1.125rem] mb-4 tracking-[0.04em] text-[#fafafa]"
-              style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+              style={{ letterSpacing: '0.04em' }}
             >
               Контакты
             </h4>
@@ -38,8 +37,7 @@ const Footer = () => {
                 className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#fafafa]"
                 style={{
                   wordSpacing: '0.3em',
-                  letterSpacing: '0.02em',
-                  fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                  letterSpacing: '0.02em'
                 }}
               >
                 г. Санкт-Петербург
@@ -49,8 +47,7 @@ const Footer = () => {
                   className="flex items-center justify-center md:justify-start space-x-2 font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#fafafa]"
                   style={{
                     wordSpacing: '0.3em',
-                    letterSpacing: '0.02em',
-                    fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                    letterSpacing: '0.02em'
                   }}
                 >
                   <span>+7 (965) 777-33-90</span>
@@ -62,8 +59,7 @@ const Footer = () => {
                 className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-[#fafafa]"
                 style={{
                   wordSpacing: '0.3em',
-                  letterSpacing: '0.02em',
-                  fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+                  letterSpacing: '0.02em'
                 }}
               >
                 info@novanezis.ru
@@ -76,8 +72,7 @@ const Footer = () => {
             className="font-sans text-[16px] font-normal leading-[1.7] tracking-wide"
             style={{
               wordSpacing: '0.3em',
-              letterSpacing: '0.02em',
-              fontFamily: 'Montserrat, Arial, Helvetica, sans-serif'
+              letterSpacing: '0.02em'
             }}
           >
             &copy; {new Date().getFullYear()} NOVANEZIS. Все права защищены.
