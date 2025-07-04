@@ -11,10 +11,13 @@ const Contact = () => {
     message: ''
   });
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('idle');
+    setIsSubmitting(true);
+    
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -29,6 +32,8 @@ const Contact = () => {
       }
     } catch {
       setStatus('error');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -179,17 +184,42 @@ const Contact = () => {
                   required
                 />
               </div>
-              <button
+              <motion.button
                 type="submit"
-                className="w-full bg-[#0a0a0a] text-[#fafafa] py-3 rounded-lg font-medium hover:bg-gray-800 transition font-sans"
+                disabled={isSubmitting}
+                whileTap={{ scale: 0.95 }}
+                className={`w-full py-3 rounded-lg font-medium font-sans transition-all duration-200 ${
+                  isSubmitting 
+                    ? 'bg-gray-400 text-gray-200 cursor-not-allowed' 
+                    : 'bg-[#0a0a0a] text-[#fafafa] hover:bg-gray-800 active:bg-gray-900'
+                }`}
               >
-                Отправить заявку
-              </button>
+                {isSubmitting ? (
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                    className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full mr-2"
+                  />
+                ) : null}
+                {isSubmitting ? 'Отправляем...' : 'Отправить заявку'}
+              </motion.button>
               {status === 'success' && (
-                <p className="text-green-600 text-center font-sans">Спасибо! Ваша заявка отправлена.</p>
+                <motion.p 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-green-600 text-center font-sans"
+                >
+                  Спасибо! Ваша заявка отправлена.
+                </motion.p>
               )}
               {status === 'error' && (
-                <p className="text-red-600 text-center font-sans">Ошибка отправки. Попробуйте позже.</p>
+                <motion.p 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-red-600 text-center font-sans"
+                >
+                  Ошибка отправки. Попробуйте позже.
+                </motion.p>
               )}
             </form>
           </div>
