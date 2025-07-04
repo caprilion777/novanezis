@@ -41,7 +41,7 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="py-30 bg-[#fafafa] font-sans"
+      className="py-30 bg-[#fafafa] font-sans scroll-mt-[50px]"
       style={{
         paddingTop: `${MENU_HEIGHT}px`,
       }}

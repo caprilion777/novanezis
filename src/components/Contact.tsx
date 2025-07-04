@@ -33,7 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-30 bg-[#fafafa] font-sans scroll-mt-[96px]">
+    <section id="contact" className="py-30 bg-[#fafafa] font-sans scroll-mt-[25px]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -69,8 +69,10 @@ const Contact = () => {
               </h3>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-sans font-bold uppercase text-[1rem] tracking-[0.04em] mb-2 text-[#0a0a0a]"
-                    style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                  <h4
+                    className="font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
+                    style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+                  >
                     Адрес
                   </h4>
                   <p
@@ -85,8 +87,10 @@ const Contact = () => {
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-sans font-bold uppercase text-[1rem] tracking-[0.04em] mb-2 text-[#0a0a0a]"
-                    style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                  <h4
+                    className="font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
+                    style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+                  >
                     Телефон
                   </h4>
                   <div
@@ -103,8 +107,10 @@ const Contact = () => {
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-sans font-bold uppercase text-[1rem] tracking-[0.04em] mb-2 text-[#0a0a0a]"
-                    style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}>
+                  <h4
+                    className="font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
+                    style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+                  >
                     Email
                   </h4>
                   <p
@@ -123,8 +129,8 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
-                  className="block font-sans font-bold uppercase text-[1rem] tracking-[0.04em] mb-2 text-[#0a0a0a]"
-                  style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+                  className="block font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
+                  style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
                 >
                   Ваше имя
                 </label>
@@ -139,8 +145,8 @@ const Contact = () => {
               </div>
               <div>
                 <label
-                  className="block font-sans font-bold uppercase text-[1rem] tracking-[0.04em] mb-2 text-[#0a0a0a]"
-                  style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+                  className="block font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
+                  style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
                 >
                   Email
                 </label>
@@ -155,8 +161,8 @@ const Contact = () => {
               </div>
               <div>
                 <label
-                  className="block font-sans font-bold uppercase text-[1rem] tracking-[0.04em] mb-2 text-[#0a0a0a]"
-                  style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+                  className="block font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
+                  style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
                 >
                   Телефон
                 </label>
@@ -171,8 +177,8 @@ const Contact = () => {
               </div>
               <div>
                 <label
-                  className="block font-sans font-bold uppercase text-[1rem] tracking-[0.04em] mb-2 text-[#0a0a0a]"
-                  style={{ letterSpacing: '0.04em', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+                  className="block font-sans font-normal text-[16px] mb-2 text-[#0a0a0a]"
+                  style={{ fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
                 >
                   Сообщение
                 </label>
