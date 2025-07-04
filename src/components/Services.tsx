@@ -33,7 +33,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="design" className="py-30 bg-[#fafafa]">
+    <section id="design" className="py-30 bg-[#fafafa] font-sans">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -41,8 +41,10 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-[32px] font-bold mb-4 text-[#0a0a0a]">Наши услуги</h2>
-          <p className="text-[#0a0a0a] text-[16px] max-w-4xl mx-auto text-left">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-widest mb-4 text-[#0a0a0a] uppercase font-sans">
+            Наши услуги
+          </h2>
+          <p className="text-base md:text-lg font-light tracking-wide text-[#0a0a0a] max-w-4xl mx-auto text-left font-sans">
             Создаём стильные и функциональные интерьеры, отражающие ваш характер и образ жизни. Полный цикл услуг — от идеи до реализации: планировка, визуализация, подбор материалов, авторский надзор. Работаем как очно, так и онлайн - с точным соблюдением сроков.
           </p>
         </motion.div>
@@ -54,11 +56,11 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="p-6 rounded-xl bg-white hover:shadow-lg transition border border-gray-200"
+              className="p-6 rounded-xl bg-white hover:shadow-lg transition border border-gray-200 font-sans"
             >
               <service.icon className="w-12 h-12 text-[#0a0a0a] mb-4" />
-              <h3 className="text-xl font-semibold mb-2 text-[#0a0a0a]">{service.title}</h3>
-              <p className="text-[#0a0a0a] text-[16px]">{service.description}</p>
+              <h3 className="text-xl font-semibold tracking-widest mb-2 text-[#0a0a0a] uppercase font-sans">{service.title}</h3>
+              <p className="text-base font-light tracking-wide text-[#0a0a0a] font-sans">{service.description}</p>
             </motion.div>
           ))}
         </div>

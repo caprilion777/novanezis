@@ -1,6 +1,5 @@
 'use client';
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const categories = ['Все', 'Квартиры', 'Дома'];
@@ -42,7 +41,7 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="py-30 bg-[#fafafa]"
+      className="py-30 bg-[#fafafa] font-sans"
       style={{
         paddingTop: `${MENU_HEIGHT}px`,
       }}
@@ -54,9 +53,11 @@ const Portfolio = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-[32px] font-bold mb-4 text-[#0a0a0a]">Наши проекты</h2>
-          <p className="text-[#0a0a0a] text-[16px] max-w-2xl mx-auto">
-            Каждый проект - это уникальная история, созданная с любовью к деталям
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-widest mb-4 text-[#0a0a0a] uppercase font-sans">
+            Наши проекты
+          </h2>
+          <p className="text-base md:text-lg font-light tracking-wide text-[#0a0a0a] max-w-2xl mx-auto font-sans">
+            Каждый проект — это уникальная история, созданная с любовью к деталям
           </p>
         </motion.div>
         <div className="flex justify-center gap-4 mb-12">
@@ -64,7 +65,7 @@ const Portfolio = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2 rounded-full transition ${
+              className={`px-6 py-2 rounded-full transition font-sans font-light tracking-widest uppercase text-base ${
                 activeCategory === category
                   ? 'bg-[#0a0a0a] text-[#fafafa]'
                   : 'bg-white text-[#0a0a0a] hover:bg-gray-100 border border-[#0a0a0a]'
@@ -84,7 +85,7 @@ const Portfolio = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="group relative overflow-hidden rounded-xl cursor-pointer"
+                className="group relative overflow-hidden rounded-xl cursor-pointer font-sans"
                 onClick={() => setSelectedProject(project)}
               >
                 <img
@@ -94,8 +95,8 @@ const Portfolio = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 p-6 text-white">
-                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                    <p className="text-sm text-gray-200">{project.area}</p>
+                    <h3 className="text-xl font-semibold tracking-widest mb-2 uppercase font-sans">{project.title}</h3>
+                    <p className="text-base font-light tracking-wide text-gray-200 font-sans">{project.area}</p>
                   </div>
                 </div>
               </motion.div>
@@ -116,7 +117,7 @@ const Portfolio = () => {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="relative max-w-4xl w-full bg-white rounded-xl overflow-hidden"
+              className="relative max-w-4xl w-full bg-white rounded-xl overflow-hidden font-sans"
               onClick={e => e.stopPropagation()}
             >
               <img
@@ -125,8 +126,8 @@ const Portfolio = () => {
                 className="w-full h-[600px] object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-2 text-[#0a0a0a]">{selectedProject.title}</h3>
-                <p className="text-[#0a0a0a] text-[16px]">Площадь: {selectedProject.area}</p>
+                <h3 className="text-2xl font-semibold tracking-widest mb-2 text-[#0a0a0a] uppercase font-sans">{selectedProject.title}</h3>
+                <p className="text-base font-light tracking-wide text-[#0a0a0a] font-sans">Площадь: {selectedProject.area}</p>
               </div>
               <button
                 className="absolute top-4 right-4 w-10 h-10 bg-[#0a0a0a] rounded-full flex items-center justify-center text-[#fafafa] hover:bg-gray-800"
