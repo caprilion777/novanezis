@@ -33,7 +33,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="design" className="py-30 bg-[#fafafa] font-sans">
+    <section id="design" className="py-30 bg-[#fafafa] font-sans scroll-mt-[50px]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
