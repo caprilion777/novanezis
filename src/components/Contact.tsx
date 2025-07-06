@@ -102,8 +102,24 @@ const Contact = () => {
                     }}
                   >
                     <span>+7 (965) 777-33-90</span>
-                    <FaWhatsapp size={20} className="text-[#0a0a0a]" />
-                    <FaTelegramPlane size={20} className="text-[#0a0a0a]" />
+                    <a
+                      href="https://wa.me/79657773390"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="WhatsApp"
+                      className="hover:text-green-500 transition-colors"
+                    >
+                      <FaWhatsapp size={20} />
+                    </a>
+                    <a
+                      href="https://t.me/novanezis"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Telegram"
+                      className="hover:text-blue-500 transition-colors"
+                    >
+                      <FaTelegramPlane size={20} />
+                    </a>
                   </div>
                 </div>
                 <div>
