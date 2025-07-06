@@ -7,7 +7,7 @@ const projects = [
     id: 1,
     title: 'Современная квартира',
     category: 'Квартиры',
-    image: '/portfolio/flat_1.jpg',
+    image: '/portfolio/pic1-1.png',
     area: '85 м²'
   },
   {
