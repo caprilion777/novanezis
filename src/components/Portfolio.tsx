@@ -2,8 +2,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const categories = ['Все', 'Квартиры', 'Дома'];
-
 const projects = [
   {
     id: 1,
@@ -31,12 +29,7 @@ const projects = [
 const MENU_HEIGHT = 96; // px — если меню другой высоты, измени это значение
 
 const Portfolio = () => {
-  const [activeCategory, setActiveCategory] = useState('Все');
   const [selectedProject, setSelectedProject] = useState<any>(null);
-
-  const filteredProjects = activeCategory === 'Все'
-    ? projects
-    : projects.filter(project => project.category === activeCategory);
 
   return (
     <section
@@ -69,27 +62,10 @@ const Portfolio = () => {
             Каждый проект — это уникальная история, созданная с любовью к деталям
           </p>
         </motion.div>
-        <div className="flex justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2 rounded-full transition font-sans font-light tracking-widest uppercase text-base ${
-                activeCategory === category
-                  ? 'bg-[#0a0a0a] text-[#fafafa]'
-                  : 'bg-white text-[#0a0a0a] hover:bg-gray-100 border border-[#0a0a0a]'
-              }`}
-              style={{
-                letterSpacing: '0.02em'
-              }}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+        {/* Кнопки фильтрации убраны */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence mode="wait">
-            {filteredProjects.map((project) => (
+            {projects.map((project) => (
               <motion.div
                 key={project.id}
                 layout
