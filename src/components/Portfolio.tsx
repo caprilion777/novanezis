@@ -10,7 +10,9 @@ const projects = [
     images: [
       '/portfolio/pic1-1.png',
       '/portfolio/pic1-2.png',
-      '/portfolio/pic1-3.png'
+      '/portfolio/pic1-3.png',
+      '/portfolio/pic1-4.png',
+      '/portfolio/pic1-5.png'
     ],
     area: '85 м²'
   },
@@ -35,6 +37,63 @@ const projects = [
 ];
 
 const MENU_HEIGHT = 96;
+
+// SVG outline arrow (Instagram style)
+const ArrowOutline = ({ direction = 'left' }: { direction?: 'left' | 'right' }) => (
+  <svg
+    width="36"
+    height="36"
+    viewBox="0 0 36 36"
+    fill="none"
+    style={{
+      transform: direction === 'right' ? 'scaleX(-1)' : undefined,
+      display: 'block'
+    }}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="18" cy="18" r="16" stroke="white" strokeWidth="2.2" fill="none" />
+    <polyline
+      points="21,12 15,18 21,24"
+      fill="none"
+      stroke="white"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+// SVG outline close (Instagram style)
+const CloseOutline = () => (
+  <svg
+    width="36"
+    height="36"
+    viewBox="0 0 36 36"
+    fill="none"
+    style={{ display: 'block' }}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="18" cy="18" r="16" stroke="white" strokeWidth="2.2" fill="none" />
+    <line
+      x1="13"
+      y1="13"
+      x2="23"
+      y2="23"
+      stroke="white"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+    />
+    <line
+      x1="23"
+      y1="13"
+      x2="13"
+      y2="23"
+      stroke="white"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+    />
+  </svg>
+);
 
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
@@ -109,13 +168,13 @@ const Portfolio = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 p-6 text-white">
                     <h3
-                      className="font-sans font-bold uppercase text-xl mb-2 tracking-[0.02em]"
-                      style={{ letterSpacing: '0.02em' }}
+                      className="font-sans font-bold uppercase text-[1.125rem] tracking-[0.04em] mb-2"
+                      style={{ letterSpacing: '0.04em' }}
                     >
                       {project.title}
                     </h3>
                     <p
-                      className="font-sans text-[18px] font-normal leading-[1.7] tracking-wide text-gray-200"
+                      className="font-sans text-[1.125rem] font-normal"
                       style={{
                         wordSpacing: '0.3em',
                         letterSpacing: '0.02em'
@@ -143,54 +202,61 @@ const Portfolio = () => {
               className="relative flex flex-col items-center justify-center"
               onClick={e => e.stopPropagation()}
             >
-              {/* Стрелки вне картинки */}
+              {/* Стрелки outline поверх картинки */}
               {selectedProject.images.length > 1 && (
                 <>
                   <button
-                    className="absolute left-[-56px] top-1/2 -translate-y-1/2 bg-[#0a0a0a] text-white rounded-full w-10 h-10 flex items-center justify-center z-10 hover:bg-gray-800 shadow-lg"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 z-20 p-0 m-0 bg-transparent border-none outline-none hover:scale-110 active:scale-95 transition-transform"
                     onClick={prevImage}
+                    aria-label="Предыдущее изображение"
                   >
-                    &#8592;
+                    <ArrowOutline direction="left" />
                   </button>
                   <button
-                    className="absolute right-[-56px] top-1/2 -translate-y-1/2 bg-[#0a0a0a] text-white rounded-full w-10 h-10 flex items-center justify-center z-10 hover:bg-gray-800 shadow-lg"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 z-20 p-0 m-0 bg-transparent border-none outline-none hover:scale-110 active:scale-95 transition-transform"
                     onClick={nextImage}
+                    aria-label="Следующее изображение"
                   >
-                    &#8594;
+                    <ArrowOutline direction="right" />
                   </button>
                 </>
               )}
-              {/* Крестик */}
+              {/* Крестик outline поверх картинки */}
               <button
-                className="absolute top-2 right-2 w-10 h-10 bg-[#0a0a0a] rounded-full flex items-center justify-center text-[#fafafa] hover:bg-gray-800 z-10"
+                className="absolute top-3 right-3 z-20 p-0 m-0 bg-transparent border-none outline-none hover:scale-110 active:scale-95 transition-transform"
                 onClick={() => setSelectedProject(null)}
-                style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.15)' }}
+                aria-label="Закрыть"
               >
-                ✕
+                <CloseOutline />
               </button>
               <img
                 src={selectedProject.images[currentImage]}
                 alt={selectedProject.title}
-                className="w-auto max-h-[80vh] max-w-[90vw] mx-auto object-contain rounded-t-xl bg-[#f5f5f5]"
+                className="w-auto max-h-[80vh] max-w-[90vw] mx-auto object-contain rounded-xl bg-[#f5f5f5]"
                 style={{ display: 'block' }}
               />
-              <div className="w-full bg-white rounded-b-xl py-2 px-2 flex flex-col items-center">
-                <h3
-                  className="font-sans font-bold uppercase text-base mb-1 tracking-[0.02em] text-[#0a0a0a] text-center"
-                  style={{ letterSpacing: '0.02em' }}
+              {/* Только точки-пагинация, без текста */}
+              {selectedProject.images.length > 1 && (
+                <div
+                  className="absolute z-20 left-1/2 -translate-x-1/2"
+                  style={{ bottom: '2%', pointerEvents: 'none' }}
                 >
-                  {selectedProject.title}
-                </h3>
-                <p
-                  className="font-sans text-sm font-normal leading-[1.7] tracking-wide text-[#0a0a0a] text-center"
-                  style={{
-                    wordSpacing: '0.3em',
-                    letterSpacing: '0.02em'
-                  }}
-                >
-                  Площадь: {selectedProject.area}
-                </p>
-              </div>
+                  <div className="flex gap-1">
+                    {selectedProject.images.map((_: any, idx: number) => (
+                      <span
+                        key={idx}
+                        className={`block rounded-full transition-all duration-200 ${idx === currentImage
+                          ? 'bg-white opacity-100 w-1.5 h-1.5'
+                          : 'bg-white opacity-40 w-1.5 h-1.5'
+                          }`}
+                        style={{
+                          boxShadow: idx === currentImage ? '0 0 4px 1px rgba(0,0,0,0.18)' : undefined
+                        }}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </motion.div>
         )}
