@@ -169,7 +169,7 @@ const Portfolio = () => {
                   alt={project.title}
                   className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110 filter grayscale"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 sm:opacity-100">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 p-6 text-white">
                     <h3
                       className="font-sans font-bold uppercase text-[1.125rem] tracking-[0.04em] mb-2"
@@ -233,18 +233,20 @@ const Portfolio = () => {
               >
                 <CloseOutline />
               </button>
-              <img
-                src={selectedProject.images[currentImage]}
-                alt={selectedProject.title}
-                className="w-auto max-h-[80vh] max-w-[90vw] mx-auto object-contain rounded-xl bg-[#f5f5f5]"
-                style={{ display: imgLoading ? 'none' : 'block' }}
-                onLoad={() => setImgLoading(false)}
-              />
-              {imgLoading && (
-                <div className="flex items-center justify-center w-[300px] h-[300px]">
-                  <span className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></span>
-                </div>
-              )}
+              <div className="relative w-auto max-h-[80vh] max-w-[90vw] mx-auto">
+                <img
+                  src={selectedProject.images[currentImage]}
+                  alt={selectedProject.title}
+                  className="w-auto max-h-[80vh] max-w-[90vw] mx-auto object-contain rounded-xl bg-[#f5f5f5] transition-opacity duration-200"
+                  style={{ opacity: imgLoading ? 0.5 : 1 }}
+                  onLoad={() => setImgLoading(false)}
+                />
+                {imgLoading && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white"></span>
+                  </div>
+                )}
+              </div>
               {/* Только точки-пагинация, без текста */}
               {selectedProject.images.length > 1 && (
                 <div
