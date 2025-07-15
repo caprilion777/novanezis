@@ -1,4 +1,5 @@
 cd downloads\interior-landing
+cd downloads\morealis
 npm run dev
 
 поправь код файла, я только скопирую и заменю оригинал
