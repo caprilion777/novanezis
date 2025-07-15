@@ -238,7 +238,7 @@ const Portfolio = () => {
                   src={selectedProject.images[currentImage]}
                   alt={selectedProject.title}
                   className="w-auto max-h-[80vh] max-w-[90vw] mx-auto object-contain rounded-xl bg-[#f5f5f5] transition-opacity duration-200"
-                  style={{ opacity: imgLoading ? 0.5 : 1 }}
+                  style={{ opacity: 1 }}
                   onLoad={() => setImgLoading(false)}
                 />
                 {imgLoading && (
