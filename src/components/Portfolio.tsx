@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const projects = [
@@ -18,10 +18,11 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Лофт в центре города',
+    title: 'Светлая квартира в центре города',
     category: 'Квартиры',
     images: [
-      '/portfolio/loft.jpg'
+      '/portfolio/pic2-1.png',
+      '/portfolio/pic2-2.png'
     ],
     area: '120 м²'
   },
@@ -121,6 +122,17 @@ const Portfolio = () => {
       prev === selectedProject.images.length - 1 ? 0 : prev + 1
     );
   };
+
+  useEffect(() => {
+    if (!selectedProject) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') prevImage(e as any);
+      if (e.key === 'ArrowRight') nextImage(e as any);
+      if (e.key === 'Escape') setSelectedProject(null);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedProject]);
 
   return (
     <section
