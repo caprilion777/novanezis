@@ -4,3 +4,5 @@ npm run dev
 
 поправь код файла, я только скопирую и заменю оригинал
 
+let's update the project in github, give me the commands, I will copy them and paste?
+
