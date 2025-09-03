@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { HomeIcon, PlayCircleIcon, ClipboardDocumentCheckIcon, ShoppingBagIcon, SparklesIcon } from '@heroicons/react/24/outline';
+import { HomeIcon, PlayCircleIcon, ClipboardDocumentCheckIcon, ShoppingBagIcon, SparklesIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
 
 const services = [
   {
@@ -28,6 +28,11 @@ const services = [
     icon: SparklesIcon,
     title: 'Декорирование',
     description: 'Расстановка мебели, аксессуаров и предметов искусства.'
+  },
+  {
+    icon: WrenchScrewdriverIcon,
+    title: 'Координация инженерных систем',
+    description: 'Согласование и интеграция инженерных разделов с дизайн-проектом. Контроль за соответствием проектных решений общей концепции интерьера.'
   }
 ];
 

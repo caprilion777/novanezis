@@ -101,9 +101,9 @@ const Contact = () => {
                       letterSpacing: '0.02em'
                     }}
                   >
-                    <span>+7 (965) 777-33-90</span>
+                    <span>+7 (993) 980-17-43</span>
                     <a
-                      href="https://wa.me/79657773390"
+                      href="https://wa.me/79939801743"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="WhatsApp"

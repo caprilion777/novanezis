@@ -50,7 +50,7 @@ const Footer = () => {
                     letterSpacing: '0.02em'
                   }}
                 >
-                  <span>+7 (965) 777-33-90</span>
+                  <span>+7 (993) 980-17-43</span>
                   <FaWhatsapp size={20} className="text-[#fafafa]" />
                   <FaTelegramPlane size={20} className="text-[#fafafa]" />
                 </div>
@@ -75,7 +75,7 @@ const Footer = () => {
               letterSpacing: '0.02em'
             }}
           >
-            &copy; {new Date().getFullYear()} NOVANEZIS. Все права защищены.
+            &copy; 2021-2025 NOVANEZIS. Все права защищены.
           </p>
         </div>
       </div>
