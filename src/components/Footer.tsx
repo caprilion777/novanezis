@@ -40,7 +40,7 @@ const Footer = () => {
                   letterSpacing: '0.02em'
                 }}
               >
-                г. Санкт-Петербург
+                г. Москва
               </li>
               <li>
                 <div

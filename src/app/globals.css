@@ -60,3 +60,8 @@ nextjs-portal,
 .text-shadow {
   text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
+
+/* Тень под header */
+.main-header {
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10), 0 1.5px 8px 0 rgba(0,0,0,0.07);
+}

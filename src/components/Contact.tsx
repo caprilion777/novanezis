@@ -85,7 +85,7 @@ const Contact = () => {
                       letterSpacing: '0.02em'
                     }}
                   >
-                    г. Санкт-Петербург
+                    г. Москва
                   </p>
                 </div>
                 <div>
