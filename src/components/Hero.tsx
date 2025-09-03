@@ -66,7 +66,7 @@ const Hero = () => {
 
       {/* Центрированный текст и кнопка поверх картинки */}
       <div className="absolute inset-0 flex flex-col items-center justify-center z-20 pointer-events-none">
-        <h1 className="text-white text-center text-xl md:text-3xl font-normal drop-shadow-lg px-4 mb-8">
+        <h1 className="text-white text-center text-xl md:text-3xl font-normal drop-shadow-lg px-4 mb-8 text-shadow">
           Создаем индивидуальные интерьерные решения —<br className="hidden md:block" /> с вами и для вас
         </h1>
         <a
