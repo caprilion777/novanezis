@@ -25,16 +25,7 @@ const projects = [
       '/portfolio/pic2-2.png'
     ],
     area: '120 м²'
-  },
-  {
-    id: 3,
-    title: 'Загородный дом',
-    category: 'Дома',
-    images: [
-      '/portfolio/house.jpg'
-    ],
-    area: '250 м²'
-  },
+  }
 ];
 
 const MENU_HEIGHT = 96;
@@ -179,8 +170,14 @@ const Portfolio = () => {
                 <img
                   src={project.images[0]}
                   alt={project.title}
-                  className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110 filter grayscale"
+                  className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110 filter grayscale brightness-110"
                 />
+                <button
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 px-5 py-2 bg-white/90 text-[#0a0a0a] font-semibold rounded-lg shadow-md hover:bg-[#f5f5f5] transition-colors duration-200"
+                  onClick={e => { e.stopPropagation(); openProject(project); }}
+                >
+                  Подробнее
+                </button>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 p-6 text-white">
                     <h3

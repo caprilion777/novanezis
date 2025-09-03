@@ -63,6 +63,8 @@ const Hero = () => {
         priority
         className="object-cover"
       />
+      {/* Overlay for dimming the hero image */}
+      <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none" />
 
       {/* Центрированный текст и кнопка поверх картинки */}
       <div className="absolute inset-0 flex flex-col items-center justify-center z-20 pointer-events-none">
